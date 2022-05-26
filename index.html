@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Advice generator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./code/scss/main.css">
+</head>
+
+<body>
+
+  <main>
+    <div class="card">
+      <div class="advice-id">Advice <span id="adviceID">#117</span></div>
+      <div class="advice-wrapper">
+        <i class="fa-solid fa-quote-left" id="left"></i>
+        <blockquote id="advice" cite="https://api.adviceslip.com/advice">
+          It is easy to sit up and take notice, what's difficult is getting up and taking action.
+        </blockquote>
+        <i class="fa-solid fa-quote-left" id="right"></i>
+      </div>
+      <!-- <div class="after-advice">
+        <i class="fa-solid fa-pause"></i>
+      </div> -->
+      <div class="svg-wrap">
+        <picture>
+          <source media="(max-width: 520px)" srcset="./images/pattern-divider-mobile.svg">
+          <source media="(min-width: 521px)" srcset="./images/pattern-divider-desktop.svg">
+          <img src="./images/pattern-divider-mobile.svg" alt="">
+        </picture>
+      </div>
+      <button class="new-advice">
+        <i class="fa-solid fa-dice-five"></i>
+      </button>
+    </div>
+  </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://essaminreact.netlify.app/">Mahmoud Essam</a>.
+  </div>
+
+  <script src="./code/js/main.js"></script>
+</body>
+
+</html>

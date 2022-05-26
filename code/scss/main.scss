@@ -1,0 +1,129 @@
+// breakpoints 
+$Mobile: 375px;
+$Desktop: 1440px;
+
+/// primary colors
+$LightCyan:hsl(193, 38%, 86%);
+$NeonGreen: hsl(150, 100%, 66%);
+$GrayishBlue: hsl(217, 19%, 38%);
+$DarkBlue: hsl(218, 23%, 16%);
+$DarkGrayishBlue: hsl(217, 19%, 24%);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', sans-serif, Arial, Helvetica;
+    font-weight: 800;
+    background-color: $DarkBlue;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    background-color: $DarkGrayishBlue;
+    max-width: 500px;
+    display: inline-block;
+    margin: 0 15px;
+    text-align: center;
+    padding: 1.5rem;
+    padding-bottom: 2rem;
+    border-radius: 10px;
+    position: relative;
+
+    .advice-id {
+        color: $NeonGreen;
+        font-size: 10px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 1rem;
+    }
+
+    .advice-wrapper {
+        position: relative;
+        color: $LightCyan;
+        padding: 10px;
+
+        i {
+            position: absolute;
+        }
+
+        #left {
+            left: 0px;
+            top: 0
+        }
+
+        #right {
+            right: 0;
+            bottom: 0px;
+            transform: rotate(180deg);
+        }
+    }
+
+    blockquote {
+        color: $LightCyan;
+        font-size: 1.4rem;
+        font-weight: 800;
+    }
+
+    .svg-wrap {
+        padding: 20px 0;
+    }
+
+    .after-advice {
+        color: $LightCyan;
+        font-size: 1.2rem;
+        position: relative;
+        margin: 0 1rem;
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 1px;
+            background-color: $GrayishBlue;
+            top: 50%;
+            left: 0;
+            position: absolute;
+        }
+
+        i {
+            display: inline-block;
+            position: relative;
+            z-index: 2;
+            background-color: $DarkGrayishBlue;
+            padding: 20px;
+        }
+    }
+
+    .new-advice {
+        background-color: $NeonGreen;
+        color: $DarkBlue;
+        border: none;
+        font-size: 20px;
+        display: block;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        position: absolute;
+        bottom: -25px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        cursor: pointer;
+        transition: all .3s ease;
+        z-index: 20;
+
+        &:hover {
+            box-shadow: 0 0 25px 2px $NeonGreen;
+        }
+    }
+}
